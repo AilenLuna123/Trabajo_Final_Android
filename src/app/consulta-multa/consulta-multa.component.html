@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Consulta de Multas
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Listado de Multas -->
+  <ion-list>
+    <ion-item *ngFor="let multa of multas" (click)="verDetalle(multa)">
+      <ion-label>
+        <h2>{{ multa.codigo }}</h2>
+        <p>{{ multa.cedula }} - {{ multa.motivo }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <!-- Detalle de Multa -->
+  <ion-card *ngIf="multaSeleccionada">
+    <ion-card-header>
+      Detalle de Multa
+    </ion-card-header>
+    <ion-card-content>
+      <p><strong>Código:</strong> {{ multaSeleccionada.codigo }}</p>
+      <p><strong>Cédula:</strong> {{ multaSeleccionada.cedula }}</p>
+      <p><strong>Motivo:</strong> {{ multaSeleccionada.motivo }}</p>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

@@ -1,3 +1,41 @@
 <ion-app>
-  <ion-router-outlet></ion-router-outlet>
+  <ion-router-outlet>
+    <ion-content>
+      <form [formGroup]="miFormulario" (ngSubmit)="registrarMulta()">
+    
+        <ion-item>
+          <ion-label>Cédula</ion-label>
+          <ion-input formControlName="cedula" type="text"></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Placa del vehículo</ion-label>
+          <ion-input formControlName="placa" type="text" required></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Motivo de la multa</ion-label>
+          <ion-input formControlName="motivo" type="text" required></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Comentario</ion-label>
+          <ion-textarea formControlName="comentario" type="text"></ion-textarea>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Latitud</ion-label>
+          <ion-input formControlName="latitud" type="text" required></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label>Longitud</ion-label>
+          <ion-input formControlName="longitud" type="longitud" required></ion-input>
+        </ion-item>
+    
+        <ion-button type="submit" expand="full">Registrar Multa</ion-button>
+    
+      </form>
+    </ion-content>
+  </ion-router-outlet>
 </ion-app>

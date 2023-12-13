@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "app-agente-de-transito-de-rd": {
+      "hosting": {
+        "app": [
+          "app-agente-de-transito-de-rd"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "app-agente-de-transito-de-rd"
+  }
+}
