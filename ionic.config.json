@@ -1,0 +1,7 @@
+{
+  "name": "AppAgente",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
